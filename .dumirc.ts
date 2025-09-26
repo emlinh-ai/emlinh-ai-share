@@ -22,6 +22,10 @@ export default defineConfig({
     socialLinks: {
       github: 'https://github.com/emlinh-ai/emlinh-ai-share',
     },
+    // Cấu hình base path cho navigation
+    ...(process.env.GITHUB_ACTIONS && {
+      logo: false,
+    }),
   },
   apiParser: {},
   resolve: {
