@@ -7,7 +7,7 @@ export default defineConfig({
   publicPath: process.env.GITHUB_ACTIONS ? '/emlinh-ai-share/' : '/',
   // Cấu hình đa ngôn ngữ
   locales: [
-    { id: 'en', name: 'English', suffix: '/en' },
+    { id: 'en', name: 'English', suffix: '' },
     { id: 'vi', name: 'Tiếng Việt', suffix: '/vi' },
   ],
   themeConfig: {
