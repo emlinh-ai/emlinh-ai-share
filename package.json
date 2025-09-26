@@ -35,6 +35,7 @@
     "url": "https://github.com/emlinh-ai/shared-types.git"
   },
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "devDependencies": {
