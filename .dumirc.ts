@@ -7,19 +7,19 @@ export default defineConfig({
   publicPath: process.env.GITHUB_ACTIONS ? '/emlinh-ai-share/' : '/',
   // Cấu hình đa ngôn ngữ
   locales: [
-    { id: 'en', name: 'English' },
-    { id: 'vi', name: 'Tiếng Việt' },
+    { id: 'en', name: 'English' , suffix: ''},
+    { id: 'vi', name: 'Tiếng Việt' , suffix: '/vi'},
   ],
   themeConfig: {
     name: '@emlinh-ai/types',
     navs: {
       'en' : [
-        { title: 'API Reference', link: '/api' },
-        { title: 'Examples', link: '/examples'},
+        { title: 'API Reference', link: process.env.GITHUB_ACTIONS ? '/emlinh-ai-share/api' : '/api' },
+        { title: 'Examples', link: process.env.GITHUB_ACTION ? '/emlinh-ai-share/examples': '/examples'},
       ],
       'vi' : [
-        { title: 'API Reference', link: '/api' },
-        { title: 'Examples', link: '/examples'},
+        { title: 'API Reference', link: process.env.GITHUB_ACTIONS ? '/emlinh-ai-share/api/vi' : '/api/vi' },
+        { title: 'Examples', link: process.env.GITHUB_ACTION ? '/emlinh-ai-share/examples/vi': '/examples/vi'},
       ],
     },
     footer: 'Made with ❤️ by EmLinh AI Team',
