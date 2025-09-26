@@ -1,5 +1,5 @@
 /**
- * @emlinh/ai-shared
+ * @emlinh-ai/types
  * 
  * Shared TypeScript types and Zod schemas for EmLinh AI ecosystem
  * Provides type-safe data contracts between desktop app and AI service

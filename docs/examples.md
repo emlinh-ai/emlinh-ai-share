@@ -5,7 +5,7 @@
 ### Tạo User mới
 
 ```typescript
-import { CreateUserSchema, type User } from '@emlinh/ai-shared';
+import { CreateUserSchema, type User } from '@emlinh-ai/types';
 
 async function createUser(userData: unknown): Promise<User> {
   // Validate input data
@@ -39,7 +39,7 @@ const user = await createUser(userData);
 ### Update User Profile
 
 ```typescript
-import { UpdateUserSchema, UserSchema } from '@emlinh/ai-shared';
+import { UpdateUserSchema, UserSchema } from '@emlinh-ai/types';
 
 async function updateUserProfile(userId: string, updates: unknown) {
   // Validate update data
@@ -70,7 +70,7 @@ await updateUserProfile('user-123', {
 ### Tạo Text Message
 
 ```typescript
-import { CreateMessageSchema, type Message } from '@emlinh/ai-shared';
+import { CreateMessageSchema, type Message } from '@emlinh-ai/types';
 
 async function sendTextMessage(data: {
   conversationId: string;
@@ -102,7 +102,7 @@ async function sendTextMessage(data: {
 ### Xử lý File Upload Message
 
 ```typescript
-import { CreateMessageSchema } from '@emlinh/ai-shared';
+import { CreateMessageSchema } from '@emlinh-ai/types';
 
 async function sendFileMessage(data: {
   conversationId: string;
@@ -140,7 +140,7 @@ async function sendFileMessage(data: {
 ### Code Block Message
 
 ```typescript
-import { CreateMessageSchema } from '@emlinh/ai-shared';
+import { CreateMessageSchema } from '@emlinh-ai/types';
 
 async function sendCodeMessage(data: {
   conversationId: string;
@@ -173,7 +173,7 @@ async function sendCodeMessage(data: {
 ### Tạo Conversation mới
 
 ```typescript
-import { CreateConversationSchema } from '@emlinh/ai-shared';
+import { CreateConversationSchema } from '@emlinh-ai/types';
 
 async function createConversation(data: {
   title: string;
@@ -203,7 +203,7 @@ async function createConversation(data: {
 ### Update Conversation Settings
 
 ```typescript
-import { UpdateConversationSchema } from '@emlinh/ai-shared';
+import { UpdateConversationSchema } from '@emlinh-ai/types';
 
 async function updateConversationSettings(
   conversationId: string,
@@ -230,7 +230,7 @@ async function updateConversationSettings(
 ### Tạo File Context
 
 ```typescript
-import { CreateContextSchema } from '@emlinh/ai-shared';
+import { CreateContextSchema } from '@emlinh-ai/types';
 
 async function createFileContext(filePath: string, content: string) {
   const fileStats = await fs.stat(filePath);
@@ -259,7 +259,7 @@ async function createFileContext(filePath: string, content: string) {
 ### Search Context
 
 ```typescript
-import { ContextSearchQuerySchema } from '@emlinh/ai-shared';
+import { ContextSearchQuerySchema } from '@emlinh-ai/types';
 
 async function searchContext(query: {
   query: string;
@@ -283,7 +283,7 @@ async function searchContext(query: {
 ### Tạo User Session
 
 ```typescript
-import { CreateSessionSchema } from '@emlinh/ai-shared';
+import { CreateSessionSchema } from '@emlinh-ai/types';
 
 async function createUserSession(data: {
   userId: string;
@@ -316,7 +316,7 @@ async function createUserSession(data: {
 
 ```typescript
 import { z } from 'zod';
-import { UserSchema } from '@emlinh/ai-shared';
+import { UserSchema } from '@emlinh-ai/types';
 
 function handleUserValidation(userData: unknown) {
   try {
@@ -340,7 +340,7 @@ function handleUserValidation(userData: unknown) {
 ### Safe Parsing
 
 ```typescript
-import { CreateUserSchema } from '@emlinh/ai-shared';
+import { CreateUserSchema } from '@emlinh-ai/types';
 
 function safeCreateUser(userData: unknown) {
   const result = CreateUserSchema.safeParse(userData);
@@ -360,7 +360,7 @@ function safeCreateUser(userData: unknown) {
 
 ```typescript
 import { Request, Response, NextFunction } from 'express';
-import { CreateUserSchema } from '@emlinh/ai-shared';
+import { CreateUserSchema } from '@emlinh-ai/types';
 
 function validateCreateUser(req: Request, res: Response, next: NextFunction) {
   try {
@@ -388,7 +388,7 @@ app.post('/users', validateCreateUser, async (req, res) => {
 
 ```typescript
 import { NextApiRequest, NextApiResponse } from 'next';
-import { CreateMessageSchema } from '@emlinh/ai-shared';
+import { CreateMessageSchema } from '@emlinh-ai/types';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {

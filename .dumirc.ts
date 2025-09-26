@@ -5,13 +5,23 @@ export default defineConfig({
   // GitHub Pages base path (chỉ sử dụng khi deploy lên GitHub Pages)
   base: process.env.GITHUB_ACTIONS ? '/emlinh-ai-share/' : '/',
   publicPath: process.env.GITHUB_ACTIONS ? '/emlinh-ai-share/' : '/',
+  // Cấu hình đa ngôn ngữ
+  locales: [
+    { id: 'en', name: 'English' },
+    { id: 'vi', name: 'Tiếng Việt' },
+    { id: 'zh', name: '中文' },
+  ],
   themeConfig: {
-    name: '@emlinh/ai-shared',
+    name: '@emlinh-ai/types',
     nav: [
       { title: 'API Reference', link: '/api' },
       { title: 'Examples', link: '/examples' },
     ],
     footer: 'Made with ❤️ by EmLinh AI Team',
+    // Cấu hình social links
+    socialLinks: {
+      github: 'https://github.com/emlinh-ai/emlinh-ai-share',
+    },
   },
   apiParser: {},
   resolve: {

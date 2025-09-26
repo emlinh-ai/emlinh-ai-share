@@ -1,15 +1,15 @@
-# @emlinh/ai-shared
+# @emlinh-ai/types
 
 Thư viện TypeScript types và Zod schemas được chia sẻ cho hệ thống AI của EmLinh.
 
 ## 🚀 Cài đặt
 
 ```bash
-npm install @emlinh/ai-shared
+npm install @emlinh-ai/types
 # hoặc
-yarn add @emlinh/ai-shared
+yarn add @emlinh-ai/types
 # hoặc
-pnpm add @emlinh/ai-shared
+pnpm add @emlinh-ai/types
 ```
 
 ## 📖 Sử dụng
@@ -46,13 +46,13 @@ import {
   // Session types
   Session,
   SessionSchema,
-} from '@emlinh/ai-shared';
+} from '@emlinh-ai/types';
 ```
 
 ### Validation với Zod
 
 ```typescript
-import { UserSchema, CreateUserSchema } from '@emlinh/ai-shared';
+import { UserSchema, CreateUserSchema } from '@emlinh-ai/types';
 
 // Validate user data
 const userData = {
@@ -83,7 +83,7 @@ const newUser = CreateUserSchema.parse(createUserData);
 ### TypeScript Types
 
 ```typescript
-import type { User, Message, Conversation } from '@emlinh/ai-shared';
+import type { User, Message, Conversation } from '@emlinh-ai/types';
 
 function processUser(user: User) {
   // TypeScript sẽ provide type safety và autocomplete

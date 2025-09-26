@@ -1,6 +1,6 @@
 # Contributing Guide
 
-Cảm ơn bạn đã quan tâm đến việc đóng góp cho `@emlinh/ai-shared`! 
+Cảm ơn bạn đã quan tâm đến việc đóng góp cho `@emlinh-ai/types`! 
 
 ## 🚀 Getting Started
 

@@ -1,5 +1,5 @@
 {
-  "name": "@emlinh-ai/emlinh-ai-shared",
+  "name": "@emlinh-ai/types",
   "version": "0.1.0",
   "description": "Shared TypeScript types and schemas for EmLinh AI ecosystem",
   "main": "dist/index.js",

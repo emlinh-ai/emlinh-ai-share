@@ -302,7 +302,7 @@ Tất cả types đều có corresponding Zod schemas:
 ### Schema Usage
 
 ```typescript
-import { UserSchema } from '@emlinh/ai-shared';
+import { UserSchema } from '@emlinh-ai/types';
 
 // Parse và validate
 const user = UserSchema.parse(userData);

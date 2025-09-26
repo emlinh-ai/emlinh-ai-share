@@ -1,6 +1,6 @@
 # Versioning Policy
 
-`@emlinh/ai-shared` tuân theo [Semantic Versioning (SemVer)](https://semver.org/) và sử dụng [Changesets](https://github.com/changesets/changesets) để manage releases.
+`@emlinh-ai/types` tuân theo [Semantic Versioning (SemVer)](https://semver.org/) và sử dụng [Changesets](https://github.com/changesets/changesets) để manage releases.
 
 ## 📋 Semantic Versioning
 
@@ -287,4 +287,4 @@ Chúng tôi sử dụng [Keep a Changelog](https://keepachangelog.com/) format:
 
 ---
 
-Versioning policy này đảm bảo predictable releases và clear migration paths cho tất cả users của `@emlinh/ai-shared`.
+Versioning policy này đảm bảo predictable releases và clear migration paths cho tất cả users của `@emlinh-ai/types`.

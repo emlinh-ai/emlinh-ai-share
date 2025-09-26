@@ -1,10 +1,8 @@
-# @emlinh/ai-shared
-
-Thư viện TypeScript types và Zod schemas được chia sẻ cho hệ thống AI của EmLinh.
+# @emlinh-ai/types
 
 ## Giới thiệu
 
-`@emlinh/ai-shared` cung cấp một bộ types và schemas được định nghĩa sẵn để đảm bảo tính nhất quán trong việc xử lý dữ liệu across các services trong hệ thống AI.
+`@emlinh-ai/types` cung cấp một bộ types và schemas được định nghĩa sẵn để đảm bảo tính nhất quán trong việc xử lý dữ liệu across các services trong hệ thống AI.
 
 ### Tính năng chính
 
@@ -17,13 +15,13 @@ Thư viện TypeScript types và Zod schemas được chia sẻ cho hệ thống
 ## Cài đặt
 
 ```bash
-npm install @emlinh/ai-shared
+npm install @emlinh-ai/types
 ```
 
 ## Quick Start
 
 ```typescript
-import { UserSchema, type User } from '@emlinh/ai-shared';
+import { UserSchema, type User } from '@emlinh-ai/types';
 
 // Validate dữ liệu với Zod
 const userData = UserSchema.parse({
