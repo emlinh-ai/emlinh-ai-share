@@ -14,6 +14,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+      pull-requests: write
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -23,7 +24,7 @@ jobs:
         with:
           node-version: 22
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@emlinh'
+          scope: '@emlinh-ai'
 
       - name: Install Dependencies
         run: npm install
