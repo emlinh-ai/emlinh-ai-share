@@ -1,0 +1,52 @@
+{
+  "name": "@emlinh/ai-shared",
+  "version": "0.1.0",
+  "description": "Shared TypeScript types and schemas for EmLinh AI ecosystem",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "dumi dev",
+    "build": "npm run build:types && npm run build:docs",
+    "build:types": "tsup",
+    "build:docs": "dumi build",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "npm run build && changeset publish"
+  },
+  "keywords": [
+    "typescript",
+    "types",
+    "schemas",
+    "zod",
+    "ai",
+    "emlinh"
+  ],
+  "author": "EmLinh AI Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emlinh-ai/shared-types.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9",
+    "@types/node": "^22.10.2",
+    "dumi": "^2.4.17",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "zod": "^3.24.1"
+  },
+  "peerDependencies": {
+    "zod": "^3.20.0"
+  }
+}
