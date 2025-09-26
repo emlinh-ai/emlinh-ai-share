@@ -2,9 +2,9 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   outputPath: 'docs-dist',
-  // GitHub Pages base path (sử dụng tên repository thực tế)
-  base: process.env.NODE_ENV === 'production' ? '/emlinh-ai-share/' : '/',
-  publicPath: process.env.NODE_ENV === 'production' ? '/emlinh-ai-share/' : '/',
+  // GitHub Pages base path (chỉ sử dụng khi deploy lên GitHub Pages)
+  base: process.env.GITHUB_ACTIONS ? '/emlinh-ai-share/' : '/',
+  publicPath: process.env.GITHUB_ACTIONS ? '/emlinh-ai-share/' : '/',
   themeConfig: {
     name: '@emlinh/ai-shared',
     nav: [
